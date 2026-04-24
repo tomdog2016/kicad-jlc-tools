@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kicad-jlc-tools"
+version = "0.1.0"
+description = "Manage JLC/LCSC part numbers and footprints in KiCad schematics"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+keywords = ["kicad", "jlcpcb", "lcsc", "bom", "schematic", "eda"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Electronic Design Automation (EDA)",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov", "ruff"]
+
+[project.scripts]
+kicad-jlc = "kicad_jlc_tools.cli.main:main"
+
+[project.gui-scripts]
+kicad-jlc-gui = "kicad_jlc_tools.gui.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 99
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
