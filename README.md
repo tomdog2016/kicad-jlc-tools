@@ -16,7 +16,17 @@ Manage JLC/LCSC part numbers in KiCad schematics — auto-match components again
 
 ## 安装 | Installation
 
+从 GitHub 直接安装：
+
 ```bash
+pip install git+https://github.com/tomdog2016/kicad-jlc-tools.git
+```
+
+或者克隆后本地安装：
+
+```bash
+git clone https://github.com/tomdog2016/kicad-jlc-tools.git
+cd kicad-jlc-tools
 pip install .
 ```
 
